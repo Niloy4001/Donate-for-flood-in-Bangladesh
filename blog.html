@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              black1: "#111111",
+              white1: "#F9F7F3",
+            },
+            fontFamily: {
+              Lexend: ["Lexend"],
+            },
+            screens: {
+              md: '600px',
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-Lexend">
+    <header class="w-full sticky top-0">
+        <!-- navbar section -->
+        <nav class="py-4 lg:py-6 w-full bg-white1 shadow-sm">
+          <div class="flex justify-between items-center w-[90%] mx-auto">
+            <div>
+              <button class="btn bg-primary text-black1 font-semibold lg:text-xl text-lg"><a href="index.html">Home</a></button>
+            </div>
+            <div class="flex items-center gap-x-4">
+                <img src="assets/logo.png" alt="" class="w-9 h-9 lg:w-12 lg:h-12">
+                <h1 class="text-black1 font-semibold lg:text-3xl text-lg hidden md:block">Donate Bangladesh</h1>
+            </div>
+            <div class="flex items-center gap-x-1 lg:gap-x-4">
+                <img src="assets/coin.png" alt="">
+                <h1 class="text-black1/[0.7] font-medium lg:text-xl text-lg"><span>5500</span> BDT</h1>
+            </div>
+          </div>
+        </nav >
+
+      </header>
+</body>
+</html>
