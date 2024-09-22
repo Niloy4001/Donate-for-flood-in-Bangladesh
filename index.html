@@ -58,13 +58,13 @@
       <!-- navbar button section -->
        <div class="w-full pt-9 lg:pt-20 pb-4 lg:pb-8 bg-white/[0.6] flex justify-center">
         <div class="flex space-x-2 lg:space-x-4">
-          <button class="btn text-lg lg:text-xl font-semibold text-black1 bg-primary border-none">Donation</button>
-          <button class="btn text-lg lg:text-xl font-semibold text-black1/[0.7] bg-white border border-[black1]/[0.1] border-solid">History</button>
+          <button class="btn text-lg lg:text-xl font-semibold text-black1 bg-primary border-none" id="toggle-donation-btn">Donation</button>
+          <button class="btn text-lg lg:text-xl font-semibold text-black1/[0.7] bg-white " id="toggle-history-btn">History</button>
         </div>
        </div>
     </header>
     <!-- Donate section -->
-     <section class="w-full space-y-4 md:space-y-8 lg:space-y-10 pb-12 md:pb-24">
+     <section class="w-full space-y-4 md:space-y-8 lg:space-y-10 pb-12 md:pb-24" id="donation-section">
       <!-- card 1 -->
        <section class="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 p-5 lg:p-8 gap-4 lg:gap-8 border border-solid border-black1/[0.1] rounded-2xl shadow">
           <!-- left div -->
@@ -149,7 +149,7 @@
 
      </section>
      <!-- History section -->
-      <section class="w-full py-11 hidden">
+      <section class="w-full py-11 hidden" id="history-section">
         <div class="w-[90%] mx-auto space-y-5">
           <div class="p-4 lg:p-8 border border-black1/[0.1] border-solid shadow-sm rounded-2xl">
             <h1 class="font-bold text-base lg:text-xl text-black1 mb-4">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h1>
@@ -167,6 +167,6 @@
       </section>
      <!-- footer section -->
     <section class="w-full pb-[72px] md:pb-36 bg-white1"></section>
-
+  <script src="js/index.js"></script>    
   </body>
 </html>
