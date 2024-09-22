@@ -21,7 +21,9 @@
         theme: {
           extend: {
             colors: {
-              clifford: "#da373d",
+              primary: "#B4F461",
+              black1: "#111111",
+              white1: "#F9F7F3",
             },
             fontFamily: {
               Lexend: ["Lexend"],
@@ -32,6 +34,25 @@
     </script>
   </head>
   <body class="font-Lexend">
-    hlw world
+    <!-- Header section -->
+    <header class="w-full">
+      <!-- navbar section -->
+      <nav class="py-4 lg:py-6 w-full bg-white1">
+        <div class="flex justify-between items-center w-[90%] mx-auto">
+          <div>
+            <button class="btn bg-primary text-black1 font-semibold lg:text-xl text-lg">Blog</button>
+          </div>
+          <div class="flex items-center gap-x-4">
+              <img src="assets/logo.png" alt="" class="w-9 h-9 lg:w-12 lg:h-12">
+              <h1 class="text-black1 font-semibold lg:text-xl text-lg hidden md:block">Donate Bangladesh</h1>
+          </div>
+          <div class="flex items-center gap-x-1 lg:gap-x-4">
+              <img src="assets/coin.png" alt="">
+              <h1 class="text-black1/[0.7] font-medium lg:text-xl text-lg"><span>5500</span> BDT</h1>
+          </div>
+        </div>
+      </nav >
+      <!-- navbar button section -->
+    </header>
   </body>
 </html>
