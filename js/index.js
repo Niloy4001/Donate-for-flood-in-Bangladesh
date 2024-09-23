@@ -1,4 +1,4 @@
-// Donation and History button toggle
+
 const donationSection = document.getElementById('donation-section');
 const historySection = document.getElementById('history-section');
 const toggleHistoryBtn = document.getElementById('toggle-history-btn');
@@ -49,18 +49,25 @@ function donateMoney(event) {
     let modalBox = event.target.parentElement;
     modalBox.setAttribute("onclick", "my_modal_5.showModal()");
 
-    if (donateAmountNumber > accountNumberBalance || donateAmountNumber <= 0 || isNaN(donateAmountNumber) ) {
+    let arr = donateInputAmount.value.split('');
+    for(item of arr){
+       if (isNaN(item)) {
         modalBox.removeAttribute("onclick");
-        alert('Invalid input');
+        alert('Invalid Input');
+        return;
+        
+       }
+        
+    }
+    
+
+    if (donateAmountNumber > accountNumberBalance || donateAmountNumber <= 0 || donateInputAmount.value === '') {
+        modalBox.removeAttribute("onclick");
+        alert('Invalid Input');
        
         return;
     }
-
- 
-    
-   
-    
-            
+           
 
     fundedBalance.innerText = fundedNumberBalance + donateAmountNumber;
     accountBalance.innerText = accountNumberBalance - donateAmountNumber;
