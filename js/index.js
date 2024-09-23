@@ -25,7 +25,8 @@ toggleDonationBtn.addEventListener('click',function(){
 
 let accountBalance = document.getElementById('account-balance');
 let divForHistoryAdding = document.getElementById('add-history-div');
-let date = new Date();
+let date = new Date().toLocaleString();
+
 
 
 
@@ -53,7 +54,7 @@ function donateMoney(event) {
     for(item of arr){
        if (isNaN(item)) {
         modalBox.removeAttribute("onclick");
-        alert('Invalid Input');
+        alert('Invalid Donation Amount');
         return;
         
        }
@@ -63,7 +64,7 @@ function donateMoney(event) {
 
     if (donateAmountNumber > accountNumberBalance || donateAmountNumber <= 0 || donateInputAmount.value === '') {
         modalBox.removeAttribute("onclick");
-        alert('Invalid Input');
+        alert('Invalid Donation Amount');
        
         return;
     }
@@ -74,7 +75,7 @@ function donateMoney(event) {
     divForHistoryAdding.innerHTML += `
             <div class="p-4 lg:p-8 border border-black1/[0.1] border-solid shadow-sm rounded-2xl">
             <h1 class="font-bold text-base lg:text-xl text-black1 mb-4">${donateAmountNumber} Taka is Donated ${donateHeading}</h1>
-            <p class="font-light text-sm lg:text-base text-black1/[0.7]">Date : ${date}</p>
+            <p class="font-light text-sm lg:text-base text-black1/[0.7]">Date : ${date} GMT +0600 (Bangladesh Standard Time)</p>
           </div>
     `;
     
