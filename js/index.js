@@ -25,7 +25,7 @@ toggleDonationBtn.addEventListener('click',function(){
 
 let accountBalance = document.getElementById('account-balance');
 let divForHistoryAdding = document.getElementById('add-history-div');
-let date = new Date().toLocaleString();
+
 
 
 
@@ -68,14 +68,15 @@ function donateMoney(event) {
        
         return;
     }
-           
+
+    let date = new Date().toLocaleString('en-US', { timeZone: 'Asia/Dhaka' });
 
     fundedBalance.innerText = fundedNumberBalance + donateAmountNumber;
     accountBalance.innerText = accountNumberBalance - donateAmountNumber;
     divForHistoryAdding.innerHTML += `
             <div class="p-4 lg:p-8 border border-black1/[0.1] border-solid shadow-sm rounded-2xl">
             <h1 class="font-bold text-base lg:text-xl text-black1 mb-4">${donateAmountNumber} Taka is Donated ${donateHeading}</h1>
-            <p class="font-light text-sm lg:text-base text-black1/[0.7]">Date : ${date} GMT +0600 (Bangladesh Standard Time)</p>
+            <p class="font-light text-sm lg:text-base text-black1/[0.7]">Date : ${date} GMT +06:00 (Bangladesh Standard Time)</p>
           </div>
     `;
     
